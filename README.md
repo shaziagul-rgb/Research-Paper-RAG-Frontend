@@ -1,37 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Research Paper RAG — Frontend
 
-## Getting Started
+A web interface for evidence-grounded research paper analysis.
 
-First, run the development server:
+Research Paper RAG transforms a research paper into a structured evidence map, helping users explore what a paper covers, what evidence supports it, which methods are discussed, and where the research points next.
+
+
+## Features
+
+* PDF upload with drag-and-drop support
+* Structured research paper analysis
+* Evidence coverage overview
+* Visual research map
+* Section-aware evidence retrieval
+* Evidence strength and confidence indicators
+* Expandable evidence and alternative sources
+* Page and section references
+* Evidence gaps
+* "Ask the Paper" question interface
+* Responsive interface for desktop and mobile
+
+## Analysis Categories
+
+The application analyses evidence across seven research dimensions:
+
+1. Research Aim / Scope
+2. Key Concepts / Definitions
+3. Theoretical Framework
+4. Research Areas / Themes
+5. Methods Discussed
+6. Evidence / Studies Reviewed
+7. Conclusions / Research Directions
+
+The results are presented as an interactive evidence map rather than a conventional document summary.
+
+## Tech Stack
+
+* **Next.js**
+* **React**
+* **TypeScript**
+* **Tailwind CSS**
+* **FastAPI backend**
+
+## How It Works
+
+```text
+Research Paper (PDF)
+        ↓
+PDF Parsing
+        ↓
+Section-Aware Chunking
+        ↓
+Semantic + Keyword Retrieval
+        ↓
+Evidence Analysis
+        ↓
+Research Map
+        ↓
+Evidence & Paper Questions
+```
+
+The frontend communicates with a separate FastAPI backend for PDF processing, evidence retrieval, analysis, and paper-specific questions.
+
+## Project Structure
+
+```text
+app/
+├── globals.css
+├── layout.tsx
+└── page.tsx
+
+components/
+└── research-rag/
+    └── EvidenceCard.tsx
+
+lib/
+└── api.ts
+
+types/
+└── rag.ts
+```
+
+## Local Development
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Configure the backend URL
+
+Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
+
+The frontend expects the Research Paper RAG FastAPI backend to be running at:
+
+```text
+http://localhost:8000
+```
+
+### 3. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Production Build
 
-## Learn More
+To verify the application before deployment:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Backend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The frontend is designed to work with the separate Research Paper RAG FastAPI backend.
 
-## Deploy on Vercel
+The backend provides:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* PDF parsing
+* Section-aware chunking
+* Semantic evidence retrieval
+* Research category analysis
+* Evidence scoring
+* Evidence-grounded paper questions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Research-Paper-RAG-Frontend
+## Purpose
+
+This project was developed as a research-to-software portfolio project, combining software engineering, information retrieval, natural language processing, and evidence-grounded AI.
+
+The focus is on making research papers easier to explore while keeping generated answers connected to retrieved evidence and page-level sources.
+
+
