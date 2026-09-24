@@ -123,16 +123,31 @@ npm run lint
 npm run build
 ```
 
-## Screenshot 
-
+## UI Preview
+ 
+### Upload & Analysis
+ 
 <img width="1356" height="661" alt="1 1" src="https://github.com/user-attachments/assets/2287eeeb-6b13-4985-a153-209274078f2c" />
-
+ 
+Upload a research paper and generate an evidence-grounded analysis.
+ 
+### Research Evidence Map
+ 
 <img width="1203" height="662" alt="1 2" src="https://github.com/user-attachments/assets/85ca9f9b-4a5d-464e-a78e-9b3989615d3b" />
-
+ 
+Explore the paper through seven research dimensions.
+ 
+### Evidence Details
+ 
 <img width="1227" height="639" alt="1 3" src="https://github.com/user-attachments/assets/8c5ca6dc-b016-46d4-be67-e857a7bf8649" />
-
+ 
+View supporting evidence, confidence scores, and source references.
+ 
+### Ask the Paper
+ 
 <img width="1229" height="643" alt="1 4" src="https://github.com/user-attachments/assets/cbac2be7-8628-47a3-a216-138f1921d50d" />
 
+Ask evidence-grounded questions about the paper.
 
 
 
