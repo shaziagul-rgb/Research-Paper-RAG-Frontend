@@ -123,6 +123,19 @@ npm run lint
 npm run build
 ```
 
+## Screenshot 
+
+<img width="1356" height="661" alt="1 1" src="https://github.com/user-attachments/assets/2287eeeb-6b13-4985-a153-209274078f2c" />
+
+<img width="1203" height="662" alt="1 2" src="https://github.com/user-attachments/assets/85ca9f9b-4a5d-464e-a78e-9b3989615d3b" />
+
+<img width="1227" height="639" alt="1 3" src="https://github.com/user-attachments/assets/8c5ca6dc-b016-46d4-be67-e857a7bf8649" />
+
+<img width="1229" height="643" alt="1 4" src="https://github.com/user-attachments/assets/cbac2be7-8628-47a3-a216-138f1921d50d" />
+
+
+
+
 ## Backend
 
 The frontend is designed to work with the separate Research Paper RAG FastAPI backend.
@@ -141,5 +154,6 @@ The backend provides:
 This project was developed as a research-to-software portfolio project, combining software engineering, information retrieval, natural language processing, and evidence-grounded AI.
 
 The focus is on making research papers easier to explore while keeping generated answers connected to retrieved evidence and page-level sources.
+
 
 
